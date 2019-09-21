@@ -14,7 +14,7 @@ export class Preloader extends Component<PreloaderProps, PreloaderState> {
   };
 
   componentDidMount() {
-    if(window) {
+    if (window) {
       this.preloadImages();
     }
   }

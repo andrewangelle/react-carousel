@@ -30,7 +30,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npx prettier --write \"./src/**/*.{ts,tsx,scss,css,js,jsx}\"",
+      "pre-commit": "npx prettier --write \"./src/**/*.{ts,tsx,scss,css,js,jsx}\" && git add .",
       "post-commit": "git update-index -g",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
