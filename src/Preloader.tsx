@@ -36,7 +36,7 @@ export class Preloader extends Component<PreloaderProps, PreloaderState> {
   preloadImages = () => {
     const urls = this.getImageUrls();
 
-    if (urls.length > 0) {
+    if (urls.length > 0 && window !== undefined) {
       urls.map(src => {
         const newImage = new Image();
         newImage.src = src;
