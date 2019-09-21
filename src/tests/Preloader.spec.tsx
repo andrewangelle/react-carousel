@@ -1,9 +1,18 @@
 import React from 'react';
-import { shallow } from './setupTests';
+import { shallow, mount, render } from './setupTests';
+import { Glide } from '../';
 import { Preloader } from '../Preloader';
+import { ReactWrapper, ShallowWrapper } from 'enzyme';
+import {
+  GlideProps,
+  GlideState,
+  PreloaderProps,
+  PreloaderState
+} from '../types';
 
 describe('Preloader', () => {
   afterEach(() => jest.clearAllMocks());
+
   it('shows loader', () => {
     const wrapper = shallow(
       <Preloader

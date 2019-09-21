@@ -14,7 +14,7 @@ export class Preloader extends Component<PreloaderProps, PreloaderState> {
   };
 
   componentDidMount() {
-    if (window) {
+    if (window && window !== undefined) {
       this.preloadImages();
     }
   }
@@ -36,7 +36,7 @@ export class Preloader extends Component<PreloaderProps, PreloaderState> {
   preloadImages = () => {
     const urls = this.getImageUrls();
 
-    if (urls.length > 0 && window !== undefined) {
+    if (urls.length > 0) {
       urls.map(src => {
         const newImage = new Image();
         newImage.src = src;
