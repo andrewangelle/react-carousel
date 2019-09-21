@@ -30,7 +30,8 @@
   },
   "husky": {
     "hooks": {
-      "post-commit": "prettier --write `git show --name-only --pretty=\"\" HEAD` && git add `git show --name-only --pretty=\"\" HEAD` && git commit --amend --no-edit'",
+      "pre-commit": "npx prettier --write \"./src/**/*.{ts,tsx,scss,css,js,jsx}\"",
+      "post-commit": "git update-index -g",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
